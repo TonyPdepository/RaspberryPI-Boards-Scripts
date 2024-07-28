@@ -1,4 +1,4 @@
-This is my first to add so bar with me to understand my logic.
+This is my first to add so bear with me to understand my logic.
 I have 2 Raspberry PIs, 4 and a 5, both 8gb memory
 Ras4 has the latest raspberry OS and Ras5 has ubuntu 24
 I wanted both to email me the ip address on boot but making sure we have a connection and if now, we wait until we do
