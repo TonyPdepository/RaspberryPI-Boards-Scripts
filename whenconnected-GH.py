@@ -6,6 +6,8 @@ import requests
 import urllib.request
 import socket
 import time
+import platform
+import distro
 
 #############################################################################
 # lets see if we can get a local ip 
@@ -45,15 +47,20 @@ def main():
     wait_for_internet_connection()
     # print("Internet connection established. Proceeding with the script...")
 
+    # lets get the OS info that this script is running on
+    osname = distro.name()
+    ostype = platform.platform()
+    
     # We have a connection. lets let the admin know the IP to connect to PI, using API.
-    string = "YOUR PI INFO" + "\n"
+    string = osname + "\n"
+    string = string + ostype + "\n"
     string = string + "WAN IP: " + get_ip_address() + "\n"
     string = string + "LOCAL IP: " + get_local_ip() + "\n"
 
     email = 'WHOITSFROM@gmail.com'
     receiver_email = 'WHOWILLGETEMAIL@gmail.com'
 
-    subject = 'Raspberry Pi is Online'
+    subject = osname + ' is Online'
     message = string
 
     bodytext = f"Subject: {subject}\n\n{message}"
