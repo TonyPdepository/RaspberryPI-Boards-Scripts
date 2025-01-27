@@ -9,4 +9,6 @@ As a side note, I also have a bash script running every min and even at 3am, so 
 Some parts I coded and/or recoded plus copy and past from elsewhere.
 This works great. Uses API from google to send emails to me.
 
+This can be used on any linux debian system as well. 
+
 Any updates to improve. let me know
